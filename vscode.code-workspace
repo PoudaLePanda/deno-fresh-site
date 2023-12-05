@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.format": true
+    },
+    "git.ignoreLimitWarning": true,
+    "i18n-ally.localesPaths": ["src/messages"],
+    "i18n-ally.sourceLanguage": "fr",
+    "i18n-ally.keystyle": "nested",
+    "editor.formatOnType": true,
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": true,
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#0C351B",
+      "titleBar.activeBackground": "#114A26",
+      "titleBar.activeForeground": "#F3FCF6"
+    }
+  },
+  "extensions": {
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+  }
+}
