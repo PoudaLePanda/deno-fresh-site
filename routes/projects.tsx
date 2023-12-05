@@ -1,11 +1,8 @@
+
 import { PageProps } from "$fresh/server.ts";
 import { Handlers } from "$fresh/server.ts";
-import { getPosts } from "../services/getposts.ts";
 import { PostList } from "../components/postlist.tsx";
-import { Avatar } from "../components/avatar.tsx";
-import { GlowingButton } from "../components/glowing-button.tsx";
-import { Hero } from "../components/hero.tsx";
-
+import { getPosts } from "../services/getposts.ts";
 export const handler: Handlers<Post[]> = {
   async GET(_req, ctx) {
     const posts = await getPosts();
@@ -13,13 +10,10 @@ export const handler: Handlers<Post[]> = {
   },
 };
 
-export default function BlogIndexPage(props: PageProps<Post[]>) {
+export default function ProjectsPage(props: PageProps<Post[]>) {
   const posts: Post[] = props.data;
   return (
     <>
-      <Hero />
-      <Avatar />
-      <GlowingButton />
       <div class="mt-8">
         <PostList posts={posts} />
       </div>

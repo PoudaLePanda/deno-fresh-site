@@ -1,5 +1,6 @@
-import { type AppProps } from "$fresh/server.ts";
-export default function App({ Component }: AppProps) {
+import { PageProps } from "$fresh/server.ts";
+
+export default function App({ Component, state }: PageProps) {
   return (
     <html>
       <head>
@@ -8,7 +9,7 @@ export default function App({ Component }: AppProps) {
         <title>my-fresh-blog</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
+      <body class="">
         <Component />
       </body>
     </html>
