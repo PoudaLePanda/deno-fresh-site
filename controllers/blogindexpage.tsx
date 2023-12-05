@@ -1,4 +1,5 @@
 import { PageProps } from "$fresh/server.ts";
+import { PostCard } from "../components/postcard.tsx";
 
 export default function BlogIndexPage(props: PageProps<Post[]>) {
   const posts = props.data;

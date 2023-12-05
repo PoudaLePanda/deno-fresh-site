@@ -1,4 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
+import { getPost } from "../services/getpost.ts";
 
 export const handler: Handlers<Post> = {
   async GET(_req, ctx) {
