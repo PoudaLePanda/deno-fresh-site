@@ -4,6 +4,7 @@ import { Handlers } from "$fresh/server.ts";
 import { getAbout } from "../services/getabout.ts";
 import * as gfm from "https://deno.land/x/gfm@0.2.5/mod.ts";
 import { Head } from "$fresh/runtime.ts";
+import { Avatar } from "../components/avatar.tsx";
 
 export const handler: Handlers<About> = {
   async GET(_req, ctx) {
@@ -19,13 +20,15 @@ export default function AboutPage(props: PageProps<About>) {
       <Head>
         <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
       </Head>
-      <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-          <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">{about.title}</h2>
-          <p class="mb-12 text-lg text-gray-500">Avatar ici...</p>
-          <div class="w-full">
+      <div class="container relative flex flex-col h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="mb-1 text-3xl font-extrabold ">{about.title}</h2>
+          <Avatar />
+        </div>
+        <div class="w-full">
           <div class="flex flex-col w-full mb-5 sm:flex-row">
             <div
-                class="mt-8 markdown-body"
+                class="mt-8 prose"
                 dangerouslySetInnerHTML={{ __html: gfm.render(about.content) }}
               />
           </div>

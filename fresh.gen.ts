@@ -9,7 +9,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $projects from "./routes/projects.tsx";
-
+import * as $DarkMode from "./islands/DarkMode.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -22,7 +22,9 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/projects.tsx": $projects,
   },
-  islands: {},
+  islands: {
+    "./islands/DarkMode.tsx": $DarkMode,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

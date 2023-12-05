@@ -2,32 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 199, 210, 254;
-    --color-text-inverted: 79, 70, 229;
-    --color-fill: 67, 56, 202;
-    --color-button-accent: 255, 255, 255;
-    --color-button-accent-hover: 238, 242, 255;
-    --color-button-muted: 99, 102, 241;
+ 
+.theme-site {
+          --background: #f8fbfc;
+          --foreground: #09111b;
+          --card: #f8fbfc;
+          --card-foreground: #09111b;
+          --popover: #f8fbfc;
+          --popover-foreground: #09111b;
+          --primary: #0e4eaf;
+          --primary-foreground: #f8fafc;
+          --secondary: #a59ddd;
+          --secondary-foreground: #f8fafc;
+          --muted: #a59ddd;
+          --muted-foreground: #f8fafc;
+          --accent: #8770cd;
+          --accent-foreground: #f8fafc;
+          --destructive: #ef4444;
+          --destructive-foreground: #f8fafc;
+          --info: #88C0D0;
+          --success: #A3BE8C;
+          --warning: #D08770;
+          --warning-foreground: #f8fafc;
+          --error: #BF616A;
+          --border: #e2e8f0;
+          --input: #e2e8f0;
+          --ring: #8770cd;
+          --base-100: #f8fafc;
+          --base-200: #f4f4f4;
+          --base-300: #e6e6e6;
+          --radius: 0.5rem;
   }
-  .theme-swiss {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 254, 202, 202;
-    --color-text-inverted: 220, 38, 38;
-    --color-fill: 185, 28, 28;
-    --color-button-accent: 255, 255, 255;
-    --color-button-accent-hover: 254, 242, 242;
-    --color-button-muted: 239, 68, 68;
+  .dark .theme-site {
+          --background: #030607;
+          --foreground: #e4ecf6;
+          --card: #020817;
+          --card-foreground: #e4ecf6;
+          --popover: #020817;
+          --popover-foreground: #e4ecf6;
+          --muted: #4a328f;
+          --muted-foreground: #e4ecf6;
+          --primary: #5091f1;
+          --primary-foreground: #e4ecf6;
+          --secondary: #2b2262;
+          --secondary-foreground: #e4ecf6;
+          --accent: #4a328f;
+          --accent-foreground: #e4ecf6;
+          --destructive: #7f1d1d;
+          --destructive-foreground: #f8fafc;
+          --info: #88C0D0;
+          --success: #A3BE8C;
+          --warning: #D08770;
+          --warning-foreground: #2E3440;
+          --error: #BF616A;
+          --border: #1e293b;
+          --input: #1e293b;
+          --ring: #4a328f;
+          --base-100: #0f172a;
+          --base-200: #1e293b;
+          --base-300: #020817;
+          --radius: 0.5rem;
   }
-  .theme-neon {
-    --color-text-base: 17, 24, 2;
-    --color-text-muted: 47, 67, 6;
-    --color-text-inverted: 235, 250, 204;
-    --color-fill: 179, 255, 23;
-    --color-button-accent: 36, 52, 3;
-    --color-button-accent-hover: 55, 79, 5;
-    --color-button-muted: 212, 255, 122;
-  }
+
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Luckiest Guy'), url('./fonts/LuckiestGuy-Regular.ttf');
 }
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('JetBrains Mono'), url('./fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+body {
+  font-family: 'JetBrains Mono';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Luckiest Guy';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}

@@ -18,7 +18,6 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
   return (
     <>
       <Hero />
-      <Avatar />
       <GlowingButton />
       <div class="mt-8">
         <PostList posts={posts} />
